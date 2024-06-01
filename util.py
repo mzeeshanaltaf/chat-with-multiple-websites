@@ -51,7 +51,7 @@ def configure_about_sidebar():
             - Enter your question related to provided websites
             ''')
     with st.sidebar.expander('Source Code'):
-        st.markdown(''' Source code: [GitHub](https://github.com/mzeeshanaltaf/website-rag-openai)''')
+        st.markdown(''' Source code: [GitHub](https://github.com/mzeeshanaltaf/chat-with-multiple-websites)''')
     with st.sidebar.expander('Contact'):
         st.markdown(''' Any Queries: Contact [Zeeshan Altaf](mailto:zeeshan.altaf@gmail.com)''')
     with st.sidebar.expander('Technology'):
@@ -106,5 +106,5 @@ def get_response_llm(llm, vector_store, query):
         return_source_documents=True,
         chain_type_kwargs={"prompt": prompt}
     )
-    answer = qa({"query": query})
+    answer = qa.invoke({"query": query})
     return answer['result']
