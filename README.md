@@ -3,7 +3,7 @@ WebInquisitor is a cutting-edge application designed to transform how you intera
 and it will leverage advanced artificial intelligence to answer any question you have related to provided website(s).
 
 # Application Link
-N/A
+https://web-inquisitor.streamlit.app/
 
 # Supported Models
 This application supports text and embedding models from Google:
