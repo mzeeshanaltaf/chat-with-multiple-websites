@@ -1,4 +1,8 @@
 from util import *
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 if "embeddings" not in st.session_state:
     st.session_state.embeddings = None
@@ -19,6 +23,10 @@ st.write("*WebInquisitor* is a cutting-edge application designed to transform ho
 st.sidebar.header("Configurations")
 app_unlock = configure_apikey_sidebar()
 urls = configure_sidebar_url(app_unlock)
+
+# Configure environment variable for API Key
+groq_api_key = os.getenv('GOOGLE_API_KEY')
+os.environ['GOOGLE_API_KEY'] = st.session_state.api_key
 
 process = st.sidebar.button("Process URLs", type='primary', disabled=not urls)
 if process:

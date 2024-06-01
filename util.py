@@ -6,9 +6,7 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_google_genai import GoogleGenerativeAI
 from langchain_community.vectorstores import FAISS
 import streamlit as st
-from dotenv import load_dotenv
 
-load_dotenv()
 
 
 # Function to configure sidebar to verify and get the model  api key
